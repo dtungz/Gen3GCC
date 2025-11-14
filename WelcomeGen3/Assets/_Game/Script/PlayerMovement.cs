@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float firstShoot = 10f;
     [SerializeField] float secondShoot = 5f;
     [SerializeField] float reloadTime = 2f;
+    [SerializeField] GameObject Bullet1;
+    [SerializeField] GameObject Bullet2;
     Coroutine coroutine; // Kiem soat nap dan
     public bool CanShoot = true;
 
@@ -40,11 +42,13 @@ public class PlayerMovement : MonoBehaviour
             if(countShoot == 1)
             {
                 _rb.linearVelocity = direction * firstShoot;
+                Bullet1.gameObject.SetActive(false);
                 coroutine = StartCoroutine(ReloadShotgun());
             }
             else if(countShoot == 2)
             {
                 _rb.linearVelocity = direction * secondShoot;
+                Bullet2.gameObject.SetActive(false);
                 if(coroutine != null)
                 {
                     StopCoroutine(coroutine);
@@ -70,5 +74,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         countShoot = 0;
         CanShoot = true;
+        Bullet1.gameObject.SetActive(true);
+        Bullet2.gameObject.SetActive(true);
     }
 }
