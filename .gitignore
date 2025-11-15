@@ -189,3 +189,5 @@ sysinfo.txt
 # End of https://www.toptal.com/developers/gitignore/api/unity,jetbrains
 WelcomeGen3/Assets/Tool
 WelcomeGen3/Assets/Tool.meta
+WelcomeGen3/Assets/Editor/Tool
+WelcomeGen3/Assets/Editor/Tool.meta
