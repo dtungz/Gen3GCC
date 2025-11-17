@@ -8,6 +8,7 @@ public class LoginChecker : MonoBehaviour
     public TMP_InputField studentIdInput;
     public TMP_Text resultText;
     public SheetImporter sheetImporter;
+    public GameObject blockAction;
 
     private const int VE_TRUNG_TUYEN_ASSET_ID = 819695;
 
@@ -53,66 +54,81 @@ public class LoginChecker : MonoBehaviour
 
     public void OnCheckButtonPressed()
     {
+        blockAction.SetActive(true);
         LootLockerSDKManager.StartGuestSession("B24DCGA115", (response) =>
         {
             if (!response.success)
             {
-                resultText.text = "Lỗi: Không tìm thấy MSV hoặc lỗi kết nối. " + response.errorData;
+                resultText.text = "Lỗi: Không tìm thấy MSV hoặc lỗi kết nối.";
+                blockAction.SetActive(false);
+                return;
             }
-            LootLockerSDKManager.GetInventory((response) =>
+            else
             {
-                if (!response.success)
+                LootLockerSDKManager.GetInventory((response) =>
                 {
-                    resultText.text = "Lỗi: Không thể lấy dữ liệu kho đồ. " + response.errorData;
-                    return;
-                }
-
-                bool isWinner = false;
-
-                foreach (var item in response.inventory)
-                {
-                    if (item.asset.id == VE_TRUNG_TUYEN_ASSET_ID)
+                    if (!response.success)
                     {
-                        isWinner = true;
-                        break;
-                    }
-                }
-
-                LootLockerSDKManager.EndSession((response) => {
-                    if(isWinner)
-                    {
-                        string studentID = studentIdInput.text.ToUpper().Trim();
-                        if (string.IsNullOrEmpty(studentID))
-                        {
-                            resultText.text = "Vui lòng nhập Mã Sinh Viên!";
-                            return;
-                        }
-                        if (!sheetImporter.msvList.Contains(studentID))
-                        {
-                            resultText.text = "Mã Sinh Viên không tồn tại!";
-                            return;
-                        }
-
-                        resultText.text = "Đang kiểm tra...";
-
-                        LootLockerSDKManager.StartGuestSession(studentID, (response) =>
-                        {
-                            if (!response.success)
-                            {
-                                resultText.text = "Lỗi: Không tìm thấy MSV hoặc lỗi kết nối. " + response.errorData;
-                                return;
-                            }
-                            // Bước 2: Đăng nhập OK, kiểm tra kho đồ
-                            CheckInventory();
-                        });
+                        resultText.text = "Lỗi: Không thể lấy dữ liệu.";
+                        blockAction.SetActive(false);
+                        return;
                     }
                     else
                     {
-                        resultText.text = "Chưa đến thời gian công bố kết quả!";
+                        bool isWinner = false;
+                        foreach (var item in response.inventory)
+                        {
+                            if (item.asset.id == VE_TRUNG_TUYEN_ASSET_ID)
+                            {
+                                isWinner = true;
+                                break;
+                            }
+                        }
+
+                        LootLockerSDKManager.EndSession((response) =>
+                        {
+                            if (isWinner)
+                            {
+                                string studentID = studentIdInput.text.ToUpper().Trim();
+                                if (string.IsNullOrEmpty(studentID))
+                                {
+                                    resultText.text = "Vui lòng nhập Mã Sinh Viên!";
+                                        blockAction.SetActive(false);
+                                    return;
+                                }
+                                if (!sheetImporter.msvList.Contains(studentID))
+                                {
+                                    resultText.text = "Mã Sinh Viên không tồn tại!";
+                                        blockAction.SetActive(false);
+                                    return;
+                                }
+
+                                resultText.text = "Đang kiểm tra...";
+
+                                LootLockerSDKManager.StartGuestSession(studentID, (response) =>
+                                {
+                                    if (!response.success)
+                                    {
+                                        resultText.text = "Lỗi: Lỗi kết nối. ";
+                                        blockAction.SetActive(false);
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        CheckInventory();
+                                        blockAction.SetActive(false);
+                                    }
+                                });
+                            }
+                            else
+                            {
+                                resultText.text = "Chưa đến thời gian công bố kết quả!";
+                                blockAction.SetActive(false);
+                            }
+                        });
                     }
                 });
-            });
-
+            }
         });
         
     }
