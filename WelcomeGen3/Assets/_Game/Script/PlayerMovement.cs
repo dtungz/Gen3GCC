@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     InputAction mouseAction;
     
     [SerializeField] Rigidbody2D _rb;
+    [SerializeField] SpriteRenderer _sr;
+    [SerializeField] SpriteRenderer _srGun;
     [SerializeField] Camera _camera;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask GroundLayer;
@@ -17,8 +19,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject Bullet2;
     Coroutine coroutine; // Kiem soat nap dan
     public bool CanShoot = true;
+    private Vector2 MousePosition;
+    private bool isFacingRight;
 
-    private bool onGround = false;
     public int countShoot = 0;
 
     private void Start()
@@ -28,15 +31,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded();
+        SetMousePos();
         Movement();
+    }
+
+    private void LateUpdate()
+    {
+        Flip();
     }
 
     void Movement()
     {
         if (mouseAction.WasPressedThisFrame() && CanShoot)
         {
-            Vector2 MousePosition = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             Vector2 direction = ((Vector2)transform.position - MousePosition).normalized;
             countShoot++;
             if(countShoot == 1)
@@ -58,17 +65,17 @@ public class PlayerMovement : MonoBehaviour
                 coroutine = StartCoroutine(ReloadShotgun());
             }
         }
-        //if(onGround)
-        //{
-        //    countShoot = 0;
-        //}
     }
 
-    private void isGrounded()
+    private void SetMousePos()
     {
-        onGround = Physics2D.OverlapCapsule(groundCheck.position, new Vector2(1f, 0.02f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
+        MousePosition = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 
+    public Vector2 GetMousePos()
+    {
+        return MousePosition;
+    }
     IEnumerator ReloadShotgun()
     {
         yield return new WaitForSeconds(reloadTime);
@@ -76,5 +83,13 @@ public class PlayerMovement : MonoBehaviour
         CanShoot = true;
         Bullet1.gameObject.SetActive(true);
         Bullet2.gameObject.SetActive(true);
+    }
+
+    void Flip()
+    {
+        // Check Huong
+        isFacingRight = (transform.position.x <= MousePosition.x ? true : false);
+        _sr.flipX = !isFacingRight;
+        _srGun.flipY = !isFacingRight;
     }
 }
