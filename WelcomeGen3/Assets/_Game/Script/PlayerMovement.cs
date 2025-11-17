@@ -24,8 +24,10 @@ public class PlayerMovement : MonoBehaviour
 
     public int countShoot = 0;
 
+
     private void Start()
     {
+        mouseAction.Enable();
         mouseAction = InputSystem.actions.FindAction("Shoot");
     }
 

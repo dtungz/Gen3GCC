@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.lootlocker.lootlockersdk": {
-      "version": "https://github.com/LootLocker/unity-sdk.git",
+      "version": "6.5.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "724529c4a63d1d927b7f519ef8645ed980fb0ccc"
+      "url": "https://package.openupm.com"
     },
     "com.unity.2d.animation": {
       "version": "12.0.2",
