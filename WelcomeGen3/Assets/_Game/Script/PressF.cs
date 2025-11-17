@@ -12,6 +12,7 @@ public class PressF : MonoBehaviour
     {
         action = InputSystem.actions.FindAction("F");
         Fuck.SetActive(false);
+        action.Enable();
     }
 
     private void Update()
