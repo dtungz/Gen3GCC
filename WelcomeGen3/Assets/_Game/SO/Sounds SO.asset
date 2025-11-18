@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SmallHedge.SoundManager.SoundsSO
   sounds:
   - name: Shoot
-    volume: 1
+    volume: 0.49
     mixer: {fileID: 0}
     sounds:
     - {fileID: 8300000, guid: c61ba992964bd4a43aa2eae15b665956, type: 3}

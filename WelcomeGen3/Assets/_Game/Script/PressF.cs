@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PressF : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PressF : MonoBehaviour
         if (canPress && action.WasPressedThisFrame())
         {
             // TODO: Chuyen scene
+            SceneManager.LoadScene("Login");
             Debug.Log("Chuyen Scene");
         }
     }
