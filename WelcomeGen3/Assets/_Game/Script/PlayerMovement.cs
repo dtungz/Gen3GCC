@@ -1,3 +1,4 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 		if (mouseAction.WasPressedThisFrame() && CanShoot)
 		{
 			OnShoot.Invoke();
+			SoundManager.PlaySound(SoundType.Shoot, volume: 1f);
 			Vector2 direction = ((Vector2)transform.position - MousePosition).normalized;
 			countShoot++;
 			if(countShoot == 1)
