@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 		if (mouseAction.WasPressedThisFrame() && CanShoot)
 		{
 			OnShoot.Invoke();
-			SoundManager.PlaySound(SoundType.Shoot, volume: 1f);
+			SoundManager.PlaySound(SoundType.Shoot, volume: 0.2f);
 			Vector2 direction = ((Vector2)transform.position - MousePosition).normalized;
 			countShoot++;
 			if(countShoot == 1)
