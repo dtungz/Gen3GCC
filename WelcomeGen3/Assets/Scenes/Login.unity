@@ -155,8 +155,8 @@ Camera:
   m_GameObject: {fileID: 198026970}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3075115, g: 0.22884774, b: 0.3584906, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -256,6 +256,112 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &278649946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278649947}
+  - component: {fileID: 278649949}
+  - component: {fileID: 278649948}
+  - component: {fileID: 278649950}
+  m_Layer: 5
+  m_Name: LetterPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &278649947
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278649946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1210684433}
+  m_Father: {fileID: 1861342407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &278649948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278649946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &278649949
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278649946}
+  m_CullTransparentMesh: 1
+--- !u!114 &278649950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278649946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1210684437}
+          m_TargetAssemblyTypeName: UIPopOut, Assembly-CSharp
+          m_MethodName: OnOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &283989342
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,8 +589,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -528,6 +634,304 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384099423}
   m_CullTransparentMesh: 1
+--- !u!1 &456329489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456329490}
+  - component: {fileID: 456329492}
+  - component: {fileID: 456329491}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &456329490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456329489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1265553121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &456329491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456329489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "L\u1ED7i"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &456329492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456329489}
+  m_CullTransparentMesh: 1
+--- !u!1 &590848267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590848268}
+  - component: {fileID: 590848270}
+  - component: {fileID: 590848269}
+  - component: {fileID: 590848271}
+  - component: {fileID: 590848272}
+  m_Layer: 5
+  m_Name: Letter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &590848268
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590848267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1912934150}
+  m_Father: {fileID: 1965336537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &590848269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590848267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9685534, g: 0.86930734, b: 0.45991048, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &590848270
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590848267}
+  m_CullTransparentMesh: 1
+--- !u!114 &590848271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590848267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335d7f90816406f4e988f8137199884f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPopUp
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.0015869141
+      inSlope: 0.21262059
+      outSlope: 0.21262059
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.43107876
+    - serializedVersion: 3
+      time: 0.31138217
+      value: 0.096588045
+      inSlope: -0.0064785546
+      outSlope: -0.0064785546
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.42354876
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.21667363
+      outSlope: -0.21667363
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6687819
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &590848272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590848267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b318ddd7dce57448ffe5958aa289bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPopOut
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  image: {fileID: 590848269}
+  text: {fileID: 1912934151}
+  target: {fileID: 1965336536}
 --- !u!1 &728528632
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &728528633
 RectTransform:
   m_ObjectHideFlags: 0
@@ -710,9 +1114,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoginChecker
   studentIdInput: {fileID: 1249404752}
-  resultText: {fileID: 728528634}
   sheetImporter: {fileID: 735029959}
   blockAction: {fileID: 1466223341}
+  letter: {fileID: 278649946}
+  notify: {fileID: 769530752}
+  result: {fileID: 1965336536}
+  notifyText: {fileID: 456329491}
+  letterText: {fileID: 1745144507}
+  resultText: {fileID: 1912934151}
 --- !u!114 &735029959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,15 +1136,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SheetImporter
   sheetURL: 
   tenList:
-  - "\u0110\u0103\u0323ng \u0110\u01B0\u0301c L\xF4\u0323c"
-  - "Nguy\xEA\u0303n Tu\xE2\u0301n Minh"
-  - "L\xEA Sy\u0303 Cao Ky\u0300"
-  - "Ha\u0300 Phi Hu\u0300ng"
-  - "\u0110\xF4\u0300ng \u0110a\u0323i Ha\u0300"
-  - "Nguy\xEA\u0303n Gia Thi\u0323nh"
-  - "Tr\xE2\u0300n H\u01B0\u0303u Vinh"
-  - "Nguy\xEA\u0303n Th\xEA\u0301 Vi\u0303"
-  - "\u0110\xF4\u0303 Ti\xEA\u0301n Tha\u0300nh"
+  - "\u0110\u1EB7ng \u0110\u1EE9c L\u1ED9c"
+  - "Nguy\u1EC5n Tu\u1EA5n Minh"
+  - "L\xEA S\u1EF9 Cao K\u1EF3"
+  - "H\xE0 Phi H\xF9ng"
+  - "\u0110\u1ED3ng \u0110\u1EA1i H\xE0"
+  - "Nguy\u1EC5n Gia Th\u1ECBnh"
+  - "Tr\u1EA7n H\u1EEFu Vinh"
+  - "Nguy\u1EC5n Th\u1EBF V\u0129"
+  - "\u0110\u1ED7 Ti\u1EBFn Th\xE0nh"
   - "Nguy\u1EC5n Ho\xE0ng D\u01B0\u01A1ng"
   - "Ph\u1EA1m Nam Anh"
   - "Nguy\u1EC5n \u0110\xECnh Vinh"
@@ -747,10 +1156,10 @@ MonoBehaviour:
   - "Tr\u1EA7n Th\u1ECB Tr\xE0 My"
   - "Nguy\u1EC5n Ng\u1ECDc Thu Anh"
   - "Nguy\u1EC5n H\u1EA3i Anh"
-  - "Kim Minh Du\u0303ng"
+  - "Kim Minh D\u0169ng"
   - "Mai \u0110\u1EAFc Danh Th\xE1i"
   - "Ng\xF4 Quang Th\xE1i"
-  - "Vu\u0303 Ha\u0309i \u0110\u0103ng"
+  - "V\u0169 H\u1EA3i \u0110\u0103ng"
   - "Nguy\xEAn B\xECnh Minh"
   - "Nguy\u1EC5n Th\xE0nh Long"
   - "Ph\u1EA1m T\xE2m \u0110an"
@@ -762,7 +1171,7 @@ MonoBehaviour:
   - "Tr\u01B0\u01A1ng Th\u1ECB Ng\u1ECDc \xC1nh"
   - "\u0110o\xE0n Minh Nguy\xEAn"
   - "Phan Th\u1ECB Th\xF9y Linh"
-  - "\u0110oa\u0300n Ha\u0309i \u0110\u0103ng"
+  - "\u0110o\xE0n H\u1EA3i \u0110\u0103ng"
   - "Ph\xFAc"
   msvList:
   - B25DCPT130
@@ -802,7 +1211,499 @@ MonoBehaviour:
   - B25DCPT117
   - B24DCKH021
   - B24DCGA115
-  passList: []
+  desList:
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, su\u1ED1t
+    qu\xE3ng th\u1EDDi gian \u0111\xE3 qua, anh \u0111\xE3 th\u1EA5y r\u1EB1ng em
+    l\xE0 m\u1ED9t ng\u01B0\u1EDDi r\u1EA5t n\u0103ng \u0111\u1ED9ng, s\u1EF1 n\u0103ng
+    \u0111\u1ED9ng \u0111\xF3 \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n trong ng\xE0y
+    first meeting khi em s\u1EB5n s\xE0ng nh\u1EADn lead r\xF9i g\u1EAFn k\u1EBFt
+    c\xE1c b\u1EA1n c\xF9ng team. C\xF9ng v\u1EDBi \u0111\xF3 l\xE0 r\u1EA5t ch\u0103m
+    h\u1ECDc, nh\u1EA5t \xE0 trong c\xE1c practice anh th\u1EA5y em l\xE0m b\xE0i
+    kh\xE1 \u0111\u1EA7y \u0111\u1EE7. Nh\u01B0ng b\xEAn c\u1EA1nh \u0111\xF3 em
+    thi tho\u1EA3ng v\u1EABn hay m\u1EA5t t\u1EADp trung v\xE0 thi tho\u1EA3ng cx
+    h\u01A1i y\u1EBFu trong c\xE1c m\u1EA3ng ki\u1EBFn th\u1EE9c l\u1EDBn. Ti\u1EBFc
+    r\u1EB1ng, h\xE0nh tr\xECnh hi\u1EC7n t\u1EA1i c\xF9a ch\xFAng ta trong k\xEC
+    training \u0111\xE3 k\u1EBFt th\xFAc."
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, v\xE0o th\u1EDDi
+    \u0111i\u1EC3m ban \u0111\u1EA7u, anh kh\xF4ng \u1EA5n m\u1EA5y v\u1EC1 em nh\u01B0ng
+    su\u1ED1t qu\xE1 tr\xECnh trainning, c\xE0ng ng\xE0y em c\xE0ng l\xE0m c\xE1c
+    anh th\xEAm \u1EA5n t\u01B0\u1EE3ng, t\u1EEB nh\u1EEFng bu\u1ED5i \u0111i s\u1EDBm,
+    practice \u0111\u1EA7y \u0111\u1EE7, contest c\u0169ng l\xE0 nh\u1EEFng ng\u01B0\u1EDDi
+    \u0111\u1EE9ng \u0111\u1EA7u c\xF9ng v\u1EDBi s\u1EF1 h\xF2a \u0111\u1ED3ng c\xF9ng
+    c\xE1c b\u1EA1n trong team. \u0110\xF3 l\xE0 nh\u1EEFng \u1EA5n t\u01B0\u1EE3ng
+    v\xF4 c\xF9ng to l\u1EDBn c\u1EE7a b\u1ECDn anh v\u1EC1 em. Nh\u01B0ng ngo\xE0i
+    ra s\u1EF1 m\u1EA5t t\u1EADp trung trong gi\u1EDD l\xE0 m\u1ED9t \u0111i\u1EC3m
+    tr\u1EEB kh\xF4ng nh\u1ECF khi thi tho\u1EA3ng em v\u1EABn c\xF2n m\u1EA5t t\u1EADp
+    trung trong nh\u1EEFng l\xFAc c\xE1c anh gi\u1EA3ng b\xE0i.Ti\u1EBFc r\u1EB1ng,
+    h\xE0nh tr\xECnh hi\u1EC7n t\u1EA1i c\xF9a ch\xFAng ta trong k\xEC training \u0111\xE3
+    k\u1EBFt th\xFAc."
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, K\u1EF3 l\xE0
+    m\u1ED9t ng\u01B0\u1EDDi khi\u1EBFn b\u1ECDn anh v\xF4 c\xF9ng \u1EA5n t\u01B0\u1EE3ng
+    ngay t\u1EEB ban \u0111\u1EA7u, ngay t\u1EEB khi em h\u1ECFi v\u1EC1 cu\u1ED9c
+    thi ICPC, b\u1ECDn anh \u0111\xE3 b\u1EAFt \u0111\u1EA7u ch\xFA \xFD \u0111\u1EBFn
+    h\xE0nh tr\xECnh c\u1EE7a em, v\xE0 th\u1EF1c s\u1EF1 l\xE0 em \u0111\xE3 kh\xF4ng
+    ph\u1EE5 l\xF2ng b\u1ECDn anh khi li\xEAn ti\u1EBFp nh\u1EEFng l\u1EA7n contest
+    lu\xF4n \u0111\u1EE9ng trong top nh\u1EEFng ng\u01B0\u1EDDi cao \u0111i\u1EC3m
+    nh\u1EA5t, nh\u01B0ng ti\u1EBFc r\u1EB1ng h\xE0nh tr\xECnh c\u1EE7a ch\xFAng
+    ta trong k\xEC trainning t\u1EDBi \u0111\xE2y l\xE0 k\u1EBFt th\xFAc"
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em r\u1EA5t v\u1EEFng ki\u1EBFn
+    th\u1EE9c v\u1EC1 l\u1EADp tr\xECnh, c\xE1c b\xE0i practice l\xE0m \u0111\u1EA7y
+    \u0111\u1EE7 tuy nhi\xEAn b\u1ECDn anh nh\u1EADn th\u1EA5y em ngh\u1EC9 v\xE0
+    \u0111\u1EBFn mu\u1ED9n kh\xE1 nhi\u1EC1u. B\u1ECDn anh mong d\xF9 k\u1EBFt qu\u1EA3
+    c\xF3 nh\u01B0 th\u1EBF n\xE0o th\xEC b\u1ECDn anh ch\xFAc em lu\xF4n lu\xF4n
+    m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp t\u1EE5c b\u01B0\u1EDBc tr\xEAn con \u0111\u01B0\u1EDDng
+    c\u1EE7a m\xECnh \u0111\xE3 ch\u1ECDn"
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em r\u1EA5t v\u1EEFng ki\u1EBFn
+    th\u1EE9c v\u1EC1 l\u1EADp tr\xECnh, c\xE1c b\xE0i practice l\xE0m \u0111\u1EA7y
+    \u0111\u1EE7 v\xE0 l\xE0 1 trong c\xE1c b\u1EA1n \u0111\xE3 ac \u0111\u01B0\u1EE3c
+    4 c\xE2u trong endcontest tuy nhi\xEAn b\u1ECDn anh nh\u1EADn th\u1EA5y em v\u1EABn
+    h\u01A1i \xEDt n\xF3i v\xE0 b\u1ECDn anh nh\u1EADn th\u1EA5y tuy em bi\u1EBFt
+    r\u1EA5t nhi\u1EC1u nh\u01B0ng em l\u1EA1i \xEDt khi gi\xFAp \u0111\u1EE1 c\xE1c
+    b\u1EA1n y\u1EBFu h\u01A1n m\xECnh v\u1EC1 ki\u1EBFn th\u1EE9c. B\u1ECDn anh
+    mong d\xF9 k\u1EBFt qu\u1EA3 c\xF3 nh\u01B0 th\u1EBF n\xE0o th\xEC b\u1ECDn anh
+    ch\xFAc em lu\xF4n lu\xF4n m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp t\u1EE5c b\u01B0\u1EDBc
+    tr\xEAn con \u0111\u01B0\u1EDDng c\u1EE7a m\xECnh \u0111\xE3 ch\u1ECDn"
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, anh r\u1EA5t
+    \u1EA5n t\u01B0\u1EE3ng v\u1EC1 em khi em \u0111\xE3 c\xF3 th\u1EC3 l\xE0m quen
+    v\u1EDBi c\xE1c b\u1EA1n m\u1ED9t c\xE1ch nhanh ch\xF3ng, ngo\xE0i ra b\u1ECDn
+    anh c\u0169ng th\u1EA5y em kh\xF4ng ng\u1EA7n ng\u1EA1i khi h\u1ECFi anh ch\u1ECB
+    nh\u1EEFng ki\u1EBFn th\u1EE9c m\xE0 em kh\xF4ng v\u1EEFng. Nh\u01B0ng d\xF9
+    v\u1EADy, b\u1ECDn anh th\u1EA5y r\u1EB1ng ki\u1EBFn th\u1EE9c c\u1EE7a em v\u1EABn
+    ch\u01B0a \u0111\u1EE7 t\u1ED1t, v\xE0 t\u1EEB \u0111\xF3 anh mong r\u1EB1ng
+    em s\u1EBD ti\u1EBFp t\u1EE5c r\xE8n luy\u1EC7n c\xE1c k\u0129 n\u0103ng c\u1EE7a
+    m\xECnh nhi\u1EC1u h\u01A1n. Ti\u1EBFc r\u1EB1ng, h\xE0nh tr\xECnh hi\u1EC7n
+    t\u1EA1i c\xF9a ch\xFAng ta trong k\xEC training \u0111\xE3 k\u1EBFt th\xFAc."
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, em l\xE0 m\u1ED9t
+    ng\u01B0\u1EDDi m\xE0 b\u1ECDn anh \u0111\xE3 \u0111\xE1nh gi\xE1 r\u1EA5t cao
+    v\u1EC1 ki\u1EBFn th\u1EE9c. Nh\u01B0ng ch\xEDnh s\u1EF1 t\u1EF1 tin \u0111\xF3
+    \u0111\xE3 khi\u1EBFn b\u1ECDn anh c\xF3 \u1EA5n t\u01B0\u1EE3ng kh\xF4ng t\u1ED1t
+    l\u1EAFm v\u1EC1 em trong khi thi tho\u1EA3ng em v\u1EABn c\xF2n l\xE0m vi\u1EC7c
+    ri\xEAng, n\xF3i chuy\u1EC7n ri\xEAng khi anh ch\u1ECB \u0111ang gi\u1EA3ng b\xE0i.
+    Anh mong r\u1EB1ng sau n\xE0y n\u1EBFu em c\xF3 bi\u1EBFt th\xEC em c\xF3 th\u1EC3
+    gi\xFAp \u0111\u1EE1 c\xE1c b\u1EA1n xung quanh v\u1EC1 ph\u1EA7n ki\u1EBFn th\u1EE9c
+    m\xE0 c\xE1c b\u1EA1n kh\xF4ng hi\u1EC3u trong nh\u1EEFng th\u1EDDi gian m\xE0
+    c\xE1c anh kh\xF4ng gi\u1EA3ng b\xE0i, \u0111\xF3 l\xE0 \u0111i\u1EC1u m\xE0
+    b\u1ECDn anh ch\u01B0a \u0111\xE1nh gi\xE1 cao \u1EDF em. D\xF9 sao th\xEC h\xE0nh
+    tr\xECnh c\u1EE7a ch\xFAng ta trong k\xEC trainning t\u1EDBi \u0111\xE2y c\u0169ng
+    \u0111\xE3 k\u1EBFt th\xFAc."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em tuy g\u1EB7p kh\xF3 kh\u0103n
+    trong vi\u1EC7c code nh\u01B0ng em lu\xF4n c\u1ED1 g\u1EAFng h\u1ECDc h\u1ECFi
+    \u0111\u1EC3 c\u1EA3i thi\u1EC7n, tuy nhi\xEAn trong c\xE1c b\xE0i practice anh
+    th\u1EA5y em ch\u01B0a ho\xE0n th\xE0nh c\xE1c b\xE0i t\u1EADp \u0111\xFAng h\u1EA1n
+    v\xE0 c\xE1c b\xE0i contest em l\xE0m c\u0169ng ch\u01B0a t\u1ED1t. B\u1ECDn
+    anh mong d\xF9 k\u1EBFt qu\u1EA3 c\xF3 nh\u01B0 th\u1EBF n\xE0o th\xEC b\u1ECDn
+    anh ch\xFAc em lu\xF4n lu\xF4n m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp t\u1EE5c b\u01B0\u1EDBc
+    tr\xEAn con \u0111\u01B0\u1EDDng c\u1EE7a m\xECnh \u0111\xE3 ch\u1ECDn"
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em tuy g\u1EB7p kh\xF3 kh\u0103n
+    trong vi\u1EC7c code nh\u01B0ng em lu\xF4n c\u1ED1 g\u1EAFng h\u1ECDc h\u1ECFi
+    \u0111\u1EC3 c\u1EA3i thi\u1EC7n, tuy nhi\xEAn trong c\xE1c b\xE0i practice anh
+    th\u1EA5y em ch\u01B0a ho\xE0n th\xE0nh c\xE1c b\xE0i t\u1EADp \u0111\xFAng h\u1EA1n
+    v\xE0 c\xE1c b\xE0i contest em l\xE0m c\u0169ng ch\u01B0a t\u1ED1t. B\u1ECDn
+    anh mong d\xF9 k\u1EBFt qu\u1EA3 c\xF3 nh\u01B0 th\u1EBF n\xE0o th\xEC b\u1ECDn
+    anh ch\xFAc em lu\xF4n lu\xF4n m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp t\u1EE5c b\u01B0\u1EDBc
+    tr\xEAn con \u0111\u01B0\u1EDDng c\u1EE7a m\xECnh \u0111\xE3 ch\u1ECDn"
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em tuy g\u1EB7p kh\xF3 kh\u0103n
+    trong vi\u1EC7c code nh\u01B0ng em lu\xF4n c\u1ED1 g\u1EAFng h\u1ECDc h\u1ECFi
+    \u0111\u1EC3 c\u1EA3i thi\u1EC7n, tuy nhi\xEAn trong c\xE1c b\xE0i practice anh
+    th\u1EA5y em ch\u01B0a ho\xE0n th\xE0nh c\xE1c b\xE0i t\u1EADp \u0111\xFAng h\u1EA1n
+    v\xE0 c\xE1c b\xE0i contest em l\xE0m c\u0169ng ch\u01B0a t\u1ED1t. B\u1ECDn
+    anh mong d\xF9 k\u1EBFt qu\u1EA3 c\xF3 nh\u01B0 th\u1EBF n\xE0o th\xEC b\u1ECDn
+    anh ch\xFAc em lu\xF4n lu\xF4n m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp t\u1EE5c b\u01B0\u1EDBc
+    tr\xEAn con \u0111\u01B0\u1EDDng c\u1EE7a m\xECnh \u0111\xE3 ch\u1ECDn"
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning. Ban \u0111\u1EA7u
+    anh kh\xF4ng \u1EA5n t\u01B0\u1EE3ng l\u1EAFm v\u1EC1 em nh\u01B0ng \u0111\xE3
+    c\xF3 s\u1EF1 thay \u0111\u1ED5i trong bu\u1ED5i \u0111\u1EA7u h\u1ECDc, em l\xE0
+    ng\u01B0\u1EDDi \u0111\u1EA7u ti\xEAn gi\u1EA3i \u0111\u01B0\u1EE3c c\xE2u h\u1ECFi
+    \u0111\u1EB7c bi\u1EC7t m\xE0 anh T\xF9ng Cow \u0111\xE3 giao cho m\u1ECDi ng\u01B0\u1EDDi
+    trong bu\u1ED5i h\u1ECDc \u0111\xF3. Ngo\xE0i ra th\xEC em ti\u1EBFp thu ki\u1EBFn
+    th\u1EE9c c\u0169ng thu\u1ED9c m\u1EE9c \u1ED5n h\u01A1n c\xE1c b\u1EA1n kh\xE1c
+    so v\u1EDBi c\xE1c b\u1EA1n c\xF9ng team. Nh\u01B0ng b\xEAn c\u1EA1nh nh\u1EEFng
+    \u0111i\u1EC3m c\u1ED9ng \u0111\xF3, b\u1ECDn anh c\xF3 \u1EA5n t\u01B0\u1EE3ng
+    kh\xF4ng t\u1ED1t cho l\u1EAFm v\u1EC1 vi\u1EC7c em v\u1EABn c\xF2n hay n\xF3i
+    chuy\u1EC7n ri\xEAng trong khi c\xE1c anh \u0111ang gi\u1EA3ng b\xE0i, b\u1ECDn
+    anh mong r\u1EB1ng em s\u1EBD thay \u0111\u1ED5i th\xF3i quen \u0111\xF3 sau
+    n\xE0y. Ti\u1EBFc r\u1EB1ng, h\xE0nh tr\xECnh hi\u1EC7n t\u1EA1i c\xF9a ch\xFAng
+    ta trong k\xEC training \u0111\xE3 k\u1EBFt th\xFAc."
+  - 
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong 1 th\xE1ng
+    training, anh mong v\u1EDBi ki\u1EBFn th\u1EE9c m\xE0 em h\u1ECDc \u0111\u01B0\u1EE3c
+    trong k\xEC training s\u1EBD gi\xFAp em \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m
+    cao trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng, trong qu\xE1
+    tr\xECnh training b\u1ECDn anh nh\u1EADn th\u1EA5y em g\u1EB7p kh\xE1 l\xE0 nhi\u1EC1u
+    kh\xF3 kh\u0103n trong vi\u1EC7c h\u1ECDc tr\u01B0\u1EDBc khi mid contest nh\u01B0ng
+    sau khi mid contest b\u1ECDn anh th\u1EA5y em \u0111\u1EAB b\u1EADt l\xEAn h\u1EB3n,
+    em \u0111\xE3 ch\u0103m h\u01A1n v\xE0 r\u1EA5t c\xF3 \xFD ch\xED h\u1ECDc t\u1EADp
+    nh\u01B0ng tuy nhi\xEAn c\xE1c b\xE0i contest em l\xE0m v\u1EABn c\xF2n ch\u01B0a
+    t\u1ED1t. B\u1ECDn anh mong d\xF9 k\u1EBFt qu\u1EA3 c\xF3 nh\u01B0 th\u1EBF n\xE0o
+    th\xEC b\u1ECDn anh ch\xFAc em lu\xF4n lu\xF4n m\u1EA1nh kh\u1ECFe v\xE0 ti\u1EBFp
+    t\u1EE5c b\u01B0\u1EDBc tr\xEAn con \u0111\u01B0\u1EDDng c\u1EE7a m\xECnh \u0111\xE3
+    ch\u1ECDn"
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, Em \u0111\xE3
+    g\xE2y cho b\u1ECDn anh m\u1ED9t s\u1EF1 \u1EA5n t\u01B0\u1EE3ng l\u1EDBn khi
+    ngay t\u1EEB \u0111\u1EA7u trong b\xE0i to\xE1n x\u1EED l\xFD thu\u1EADn ngh\u1ECBch
+    em \u0111\xE3 s\u1EED d\u1EE5ng string - m\u1ED9t ki\u1EBFn th\u1EE9c b\u1ECDn
+    anh ch\u01B0a t\u1EEBng d\u1EA1y, t\u1EEB \u0111\xF3 b\u1ECDn anh \u0111\xE3
+    th\u1EA5y \u0111\u01B0\u1EE3c r\u1EB1ng em \u0111\xE3 c\xF3 tinh th\u1EA7n h\u1ECDc
+    tr\u01B0\u1EDBc. Nh\u01B0ng nh\u1EEFng ki\u1EBFn th\u1EE9c c\u1EE7a em v\u1EABn
+    ch\u01B0a ho\xE0n to\xE0n v\u1EEFng v\xE0ng v\xE0 c\xF2n qu\xE1 nhi\u1EC1u ch\u1ED7
+    b\u1ECB h\u1ED5ng, ngo\xE0i ra nh\u1EEFng ng\xE0y \u0111\u1EA7u em r\u1EA5t m\u1EA5t
+    t\u1EADp trung. Anh mong r\u1EB1ng em s\u1EBD kh\u1EAFc ph\u1EE5c \u0111\u01B0\u1EE3c
+    c\xE1c nh\u01B0\u1EE3c \u0111i\u1EC3m \u0111\xF3 trong t\u01B0\u01A1ng lai. Ti\u1EBFc
+    r\u1EB1ng, h\xE0nh tr\xECnh hi\u1EC7n t\u1EA1i c\xF9a ch\xFAng ta trong k\xEC
+    training \u0111\xE3 k\u1EBFt th\xFAc."
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning. Em l\xE0 m\u1ED9t
+    ng\u01B0\u1EDDi g\xE2y cho b\u1ECDn anh m\u1ED9t s\u1EF1 \u1EA5n t\u01B0\u1EE3ng
+    v\xF4 c\xF9ng l\u1EDBn t\u1EEB nh\u1EEFng ki\u1EBFn th\u1EE9c m\xE0 em \u0111\xE3
+    c\xF3. Nh\u01B0ng trong qu\xE1 tr\xECnh h\u1ECDc, b\u1ECDn anh ch\u01B0a th\u1EA5y
+    \u0111\u01B0\u1EE3c s\u1EF1 nhi\u1EC7t huy\u1EBFt c\u1EE7a em, c\xF3 l\u1EBD
+    ph\u1EA7n n\xE0o \u0111\xF3 l\xE0 em \u0111\xE3 bi\u1EBFt tr\u01B0\u1EDBc c\xE1c
+    ki\u1EBFn th\u1EE9c m\xE0 b\u1ECDn anh s\u1EBD d\u1EA1y r\u1ED3i. V\xE0 b\u1ECDn
+    anh c\u0169ng \u0111\xE1nh gi\xE1 r\u1EA5t cao v\u1EC1 c\xE1ch m\xE0 em t\u1EF1
+    h\u1ECDc t\u1EA5t c\u1EA3 c\xE1c ki\u1EBFn th\u1EE9c v\u1EC1 code trong th\u1EDDi
+    gian em v\u1EABn c\xF2n \u1EDF m\xE1i tr\u01B0\u1EDDng c\u1EA5p 3. Nh\u01B0ng
+    trong k\xEC trainning b\u1ECDn anh th\u1EA5y \u0111\u01B0\u1EE3c th\u1EDDi gian
+    c\u1EE7a em kh\xF4ng \u0111\xE1p \u1EE9ng \u0111\u01B0\u1EE3c th\u1EDDi gian
+    ho\u1EA1t \u0111\u1ED9ng c\u1EE7a CLB v\xE0 b\u1ECDn anh ngh\u0129 r\u1EB1ng
+    vi\u1EC7c em t\u1EF1 h\u1ECDc v\xE0 t\xECm t\xF2i c\xF3 l\u1EBD s\u1EBD h\u1EE3p
+    v\u1EDBi em h\u01A1n v\u1EDBi \u0111\u1ECBnh h\u01B0\u1EDBng c\u1EE7a CLB."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong su\u1ED1t
+    h\u01A1n 1 th\xE1ng Training v\u1EEBa qua. Hi v\u1ECDng r\u1EB1ng nh\u1EEFng
+    g\xEC em h\u1ECDc \u0111\u01B0\u1EE3c \u1EDF CLB s\u1EBD gi\xFAp \xEDch \xEDt
+    nhi\u1EC1u cho qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn tr\u01B0\u1EDDng c\u0169ng
+    nh\u01B0 qu\xE1 tr\xECnh tr\u01B0\u1EDDng th\xE0nh c\u1EE7a em."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng CLB trong su\u1ED1t
+    h\u01A1n 1 th\xE1ng Training v\u1EEBa qua. Anh \u1EA5n t\u01B0\u1EE3ng b\u1EDFi
+    s\u1EF1 ch\u0103m ch\u1EC9 v\xE0 tinh th\u1EA7n quy\u1EBFt t\xE2m kh\xF4ng ch\u1ECBu
+    b\u1ECF cu\u1ED9c trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp v\xE0 ki\u1EC3m tra
+    c\u1EE7a em. Hi v\u1ECDng r\u1EB1ng v\u1EDBi nh\u1EEFng \u0111i\u1EC1u \u0111\xF3,
+    em s\u1EBD \u0111\u1EA1t \u0111\u01B0\u1EE3c nh\u1EEFng th\xE0nh c\xF4ng trong
+    t\u01B0\u01A1ng lai."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 tham gia Training GCC 2025. D\xF9 c\xF3 h\u01A1i
+    \xEDt c\u01A1 h\u1ED9i \u0111\u01B0\u1EE3c g\u1EB7p em nh\u01B0ng anh mong v\u1EDBi
+    nh\u1EEFng tr\u1EA3i nghi\u1EC7m trong su\u1ED1t qu\xE1 tr\xECnh Training, em
+    s\u1EBD t\u1EF1 tin h\u01A1n v\u1EDBi nh\u1EEFng kh\xF3 kh\u0103n tr\xEAn tr\u01B0\u1EDDng."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong su\u1ED1t
+    h\u01A1n 1 th\xE1ng v\u1EEBa qua. \u1EDE em, b\u1ECDn anh th\u1EA5y \u0111\u01B0\u1EE3c
+    tinh th\u1EA7n tho\u1EA3i m\xE1i, d\u1EC5 g\u1EA7n v\xE0 t\xEDch c\u1EF1c. Hi
+    v\u1ECDng r\u1EB1ng v\u1EDBi nh\u1EEFng g\xEC em h\u1ECDc \u0111\u01B0\u1EE3c
+    \u1EDF GCC, em s\u1EBD \u0111\u1EA1t \u0111\u01B0\u1EE3c nh\u1EEFng th\xE0nh
+    t\u1EF1u m\xE0 m\xECnh mong mu\u1ED1n."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111i c\xF9ng GCC trong su\u1ED1t h\u01A1n
+    1 th\xE1ng Training v\u1EEBa qua. Nh\u1EADn th\u1EA5y em l\xE0 m\u1ED9t ng\u01B0\u1EDDi
+    \xEDt n\xF3i, h\u01B0\u1EDBng n\u1ED9i, anh mong em s\u1EBD lu\xF4n t\u1EF1 tin,
+    c\u1EDFi m\u1EDF h\u01A1n v\xE0 th\xE0nh c\xF4ng trong t\u01B0\u01A1ng lai. Ch\xFAc
+    cho nh\u1EEFng g\xEC em h\u1ECDc \u0111\u01B0\u1EE3c \u1EDF GCC s\u1EBD gi\xFAp
+    \xEDch cho em tr\xEAn ch\u1EB7ng \u0111\u01B0\u1EDDng s\u1EAFp t\u1EDBi"
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng GCC trong su\u1ED1t
+    h\u01A1n 1 th\xE1ng Training v\u1EEBa qua. Anh r\u1EA5t th\xEDch s\u1EF1 h\xE0i
+    h\u01B0\u1EDBc, t\xEDch c\u1EF1c v\xE0 l\u1EA1c quan \u1EDF em. Hi v\u1ECDng
+    r\u1EB1ng nh\u1EEFng g\xEC em h\u1ECDc \u0111\u01B0\u1EE3c \u1EDF CLB s\u1EBD
+    gi\xFAp \xEDch \xEDt nhi\u1EC1u cho qu\xE1 tr\xECnh h\u1ECDc t\u1EADp tr\xEAn
+    tr\u01B0\u1EDDng c\u0169ng nh\u01B0 qu\xE1 tr\xECnh tr\u01B0\u1EDDng th\xE0nh
+    c\u1EE7a em."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 \u0111\u1ED3ng h\xE0nh c\xF9ng CLB trong su\u1ED1t
+    h\u01A1n 1 th\xE1ng Training v\u1EEBa qua. Anh r\u1EA5t \u1EA5n t\u01B0\u1EE3ng
+    \u1EDF em b\u1EDFi s\u1EF1 ch\u0103m ch\u1EC9 v\xE0 tinh th\u1EA7n quy\u1EBFt
+    t\xE2m kh\xF4ng ch\u1ECBu b\u1ECF cu\u1ED9c trong qu\xE1 tr\xECnh h\u1ECDc t\u1EADp
+    v\xE0 c\xE1c bu\u1ED5i ki\u1EC3m tra. Hi v\u1ECDng r\u1EB1ng v\u1EDBi nh\u1EEFng
+    \u0111i\u1EC1u qu\xFD gi\xE1 \u0111\xF3, em s\u1EBD ph\xE1t tri\u1EC3n h\u01A1n
+    n\u1EEFa, nhi\u1EC7t huy\u1EBFt h\u01A1n n\u1EEFa v\xE0 th\xE0nh c\xF4ng x\u1EE9ng
+    \u0111\xE1ng v\u1EDBi nh\u1EEFng g\xEC m\xECnh \u0111\xE3 n\u1ED7 l\u1EF1c \u0111\u1EC3
+    c\xF3 \u0111\u01B0\u1EE3c. Anh c\u0169ng mong nh\u1EEFng g\xEC em h\u1ECDc \u0111\u01B0\u1EE3c
+    \u1EDF CLB s\u1EBD gi\xFAp em t\u1EF1 tin \u0111\u1ED1i m\u1EB7t v\u1EDBi nh\u1EEFng
+    kh\xF3 kh\u0103n th\u1EED th\xE1ch tr\xEAn ch\u1EB7ng \u0111\u01B0\u1EDDng s\u1EAFp
+    t\u1EDBi."
+  - "C\u1EA3m \u01A1n em \u0111\xE3 tham gia Training GCC 2025. D\xF9 c\xF3 h\u01A1i
+    \xEDt c\u01A1 h\u1ED9i \u0111\u01B0\u1EE3c g\u1EB7p em nh\u01B0ng anh mong v\u1EDBi
+    nh\u1EEFng tr\u1EA3i nghi\u1EC7m trong su\u1ED1t qu\xE1 tr\xECnh Training, em
+    s\u1EBD lu\xF4n t\u1EF1 tin, d\xE1m \u0111\u01B0\u01A1ng \u0111\u1EA7u v\u1EDBi
+    th\u1EED th\xE1ch. Ch\u1EB7ng \u0111\u01B0\u1EDDng ph\xEDa tr\u01B0\u1EDBc c\xF2n
+    r\u1EA5t d\xE0i, d\u1EABu c\xF3 kh\xF3 kh\u0103n nh\u01B0ng c\u01A1 h\u1ED9i
+    c\u0169ng nhi\u1EC1u kh\xF4ng k\xE9m. Anh tin em s\u1EBD l\xE0m \u0111\u01B0\u1EE3c
+    nhi\u1EC1u \u0111i\u1EC1u l\u1EDBn lao v\xE0 ng\xE0y c\xE0ng ph\xE1t tri\u1EC3n."
+  - ','
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "Ch\xFAc m\u1EEBng em \u0111\xE3 ho\xE0n th\xE0nh k\xEC trainning, su\u1ED1t
+    qu\xE3ng th\u1EDDi gian \u0111\xE3 qua, anh \u0111\xE3 th\u1EA5y r\u1EB1ng em
+    l\xE0 m\u1ED9t ng\u01B0\u1EDDi r\u1EA5t n\u0103ng \u0111\u1ED9ng, s\u1EF1 n\u0103ng
+    \u0111\u1ED9ng \u0111\xF3 \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n trong ng\xE0y
+    first meeting khi em s\u1EB5n s\xE0ng nh\u1EADn lead r\xF9i g\u1EAFn k\u1EBFt
+    c\xE1c b\u1EA1n c\xF9ng team. C\xF9ng v\u1EDBi \u0111\xF3 l\xE0 r\u1EA5t ch\u0103m
+    h\u1ECDc, nh\u1EA5t \xE0 trong c\xE1c practice anh th\u1EA5y em l\xE0m b\xE0i
+    kh\xE1 \u0111\u1EA7y \u0111\u1EE7. Nh\u01B0ng b\xEAn c\u1EA1nh \u0111\xF3 em
+    thi tho\u1EA3ng v\u1EABn hay m\u1EA5t t\u1EADp trung v\xE0 thi tho\u1EA3ng cx
+    h\u01A1i y\u1EBFu trong c\xE1c m\u1EA3ng ki\u1EBFn th\u1EE9c l\u1EDBn. Ti\u1EBFc
+    r\u1EB1ng, h\xE0nh tr\xECnh hi\u1EC7n t\u1EA1i c\xF9a ch\xFAng ta trong k\xEC
+    training \u0111\xE3 k\u1EBFt th\xFAc."
+--- !u!1 &769530752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769530753}
+  - component: {fileID: 769530755}
+  - component: {fileID: 769530754}
+  m_Layer: 5
+  m_Name: Notify
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &769530753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769530752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1265553121}
+  m_Father: {fileID: 1861342407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &769530754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769530752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &769530755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769530752}
+  m_CullTransparentMesh: 1
+--- !u!1 &1210684432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1210684433}
+  - component: {fileID: 1210684435}
+  - component: {fileID: 1210684434}
+  - component: {fileID: 1210684436}
+  - component: {fileID: 1210684437}
+  m_Layer: 5
+  m_Name: Letter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1210684433
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210684432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1745144506}
+  m_Father: {fileID: 278649947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1210684434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210684432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9685534, g: 0.86930734, b: 0.45991048, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1210684435
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210684432}
+  m_CullTransparentMesh: 1
+--- !u!114 &1210684436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210684432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335d7f90816406f4e988f8137199884f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPopUp
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.0015869141
+      inSlope: 0.21262059
+      outSlope: 0.21262059
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.43107876
+    - serializedVersion: 3
+      time: 0.31138217
+      value: 0.096588045
+      inSlope: -0.0064785546
+      outSlope: -0.0064785546
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.42354876
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.21667363
+      outSlope: -0.21667363
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6687819
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1210684437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210684432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b318ddd7dce57448ffe5958aa289bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPopOut
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  image: {fileID: 1210684434}
+  text: {fileID: 1745144507}
+  target: {fileID: 278649946}
 --- !u!1 &1249404750
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,17 +1730,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249404750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1701987325}
-  m_Father: {fileID: 1941382098}
+  m_Father: {fileID: 2016819553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249404752
@@ -981,6 +1882,168 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249404750}
   m_CullTransparentMesh: 1
+--- !u!1 &1265553120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265553121}
+  - component: {fileID: 1265553123}
+  - component: {fileID: 1265553122}
+  - component: {fileID: 1265553124}
+  - component: {fileID: 1265553125}
+  m_Layer: 5
+  m_Name: Noti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1265553121
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265553120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 456329490}
+  m_Father: {fileID: 769530753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1265553122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265553120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.5732946, b: 0.3238992, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1265553123
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265553120}
+  m_CullTransparentMesh: 1
+--- !u!114 &1265553124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265553120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335d7f90816406f4e988f8137199884f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPopUp
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.0015869141
+      inSlope: 0.21262059
+      outSlope: 0.21262059
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.43107876
+    - serializedVersion: 3
+      time: 0.31138217
+      value: 0.096588045
+      inSlope: -0.0064785546
+      outSlope: -0.0064785546
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.42354876
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.21667363
+      outSlope: -0.21667363
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6687819
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1265553125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265553120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635e4e4325512d74fa7833d115e651c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UITurnOffByTime
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  image: {fileID: 1265553122}
+  text: {fileID: 456329491}
+  target: {fileID: 769530752}
 --- !u!1 &1374268542
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,14 +2055,13 @@ GameObject:
   - component: {fileID: 1374268543}
   - component: {fileID: 1374268546}
   - component: {fileID: 1374268545}
-  - component: {fileID: 1374268544}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1374268543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1020,62 +2082,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1374268544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374268542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1374268545}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 735029958}
-        m_TargetAssemblyTypeName: LoginChecker, Assembly-CSharp
-        m_MethodName: OnCheckButtonPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1374268545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1267,7 +2273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110i\u1EC1n m\xE3 sinh vi\xEAn..."
+  m_text: "M\xE3 Sinh Vi\xEAn"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1301,8 +2307,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1398,6 +2404,142 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1745144505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745144506}
+  - component: {fileID: 1745144508}
+  - component: {fileID: 1745144507}
+  m_Layer: 5
+  m_Name: Des
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1745144506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745144505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1210684433}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1745144507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745144505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "C\u1EA3m \u01A0n Em"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b41b767b2dca71d47af277cd53c513dc, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 16
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 1
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1745144508
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745144505}
+  m_CullTransparentMesh: 1
 --- !u!1 &1861342403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,10 +2588,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1474,7 +2616,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1493,6 +2635,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1941382098}
+  - {fileID: 769530753}
+  - {fileID: 1965336537}
+  - {fileID: 278649947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1500,6 +2645,142 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1912934149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912934150}
+  - component: {fileID: 1912934152}
+  - component: {fileID: 1912934151}
+  m_Layer: 5
+  m_Name: Des
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1912934150
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912934149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 590848268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -200, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1912934151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912934149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "C\u1EA3m \u01A0n Em"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b41b767b2dca71d47af277cd53c513dc, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 16
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 1
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1912934152
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912934149}
+  m_CullTransparentMesh: 1
 --- !u!1 &1921094733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +2890,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1249404751}
+  - {fileID: 2016819553}
   - {fileID: 728528633}
   - {fileID: 1374268543}
   - {fileID: 1466223342}
@@ -1627,14 +2908,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941382097}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1658,6 +2939,218 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941382097}
   m_CullTransparentMesh: 1
+--- !u!1 &1965336536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965336537}
+  - component: {fileID: 1965336541}
+  - component: {fileID: 1965336540}
+  - component: {fileID: 1965336539}
+  m_Layer: 5
+  m_Name: Result
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1965336537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965336536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 590848268}
+  m_Father: {fileID: 1861342407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1965336539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965336536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 590848272}
+          m_TargetAssemblyTypeName: UIPopOut, Assembly-CSharp
+          m_MethodName: OnOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1965336540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965336536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1965336541
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965336536}
+  m_CullTransparentMesh: 1
+--- !u!1 &2016819552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016819553}
+  - component: {fileID: 2016819555}
+  - component: {fileID: 2016819554}
+  - component: {fileID: 2016819556}
+  m_Layer: 5
+  m_Name: Letter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2016819553
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016819552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1249404751}
+  m_Father: {fileID: 1941382098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2016819554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016819552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1330074487495985357, guid: db046f59315aa0d48a5c7f9a5be493fb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2016819555
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016819552}
+  m_CullTransparentMesh: 1
+--- !u!114 &2016819556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016819552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 735029958}
+          m_TargetAssemblyTypeName: LoginChecker, Assembly-CSharp
+          m_MethodName: OnCheckButtonPressed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

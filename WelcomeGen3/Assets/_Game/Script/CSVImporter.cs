@@ -11,7 +11,7 @@ public class SheetImporter : MonoBehaviour
 
     public List<string> tenList = new List<string>();
     public List<string> msvList = new List<string>();
-    public List<string> passList = new List<string>();
+    public List<string> desList = new List<string>();
 
     [ContextMenu("LoadDataFromSheet")]
     public void LoadFromSheet()
@@ -35,8 +35,9 @@ public class SheetImporter : MonoBehaviour
             if (www.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log("Tải thành công!");
+                //byte[] results = www.downloadHandler.data;
+                //string csvData = System.Text.Encoding.UTF8.GetString(results, 0, results.Length);
                 string csvData = www.downloadHandler.text;
-
                 ParseCSV(csvData);
             }
             else
@@ -50,7 +51,7 @@ public class SheetImporter : MonoBehaviour
     {
         tenList.Clear();
         msvList.Clear();
-        passList.Clear();
+        desList.Clear();
 
         string[] lines = csvData.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -65,13 +66,13 @@ public class SheetImporter : MonoBehaviour
             string line = lines[i];
             if (string.IsNullOrWhiteSpace(line)) continue;
 
-            string[] values = line.Split(',');
+            string[] values = line.Split('\t');
 
-            if (values.Length >= 3)
+            if (values.Length >= 4)
             {
-                tenList.Add(values[0].Trim());
-                msvList.Add(values[1].Trim());
-                //passList.Add(values[2].Trim());
+                tenList.Add(values[0].Trim().Normalize());
+                msvList.Add(values[1].Trim().Normalize());
+                desList.Add(values[3].Trim().Normalize());
             }
         }
 
@@ -80,5 +81,16 @@ public class SheetImporter : MonoBehaviour
         // {
         //     Debug.Log($"Tên: {tenList[i]}, MSV: {msvList[i]}, Pass: {passList[i]}");
         // }
+    }
+    public string GetDesByMSV(string msv)
+    {
+        for (int i = 0; i < msvList.Count; i++)
+        {
+            if (msv == msvList[i])
+            {
+                return desList[i];
+            }
+        }
+        return null;
     }
 }
