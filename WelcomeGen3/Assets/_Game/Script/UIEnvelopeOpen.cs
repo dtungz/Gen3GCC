@@ -34,6 +34,7 @@ public class UIEnvelopeOpen : MonoBehaviour
 
     private IEnumerator EnvelopeSequence()
     {
+        textUI.text = "";
         yield return StartCoroutine(EnvelopeOpen());
         yield return StartCoroutine(RevealText());
     }
@@ -68,6 +69,7 @@ public class UIEnvelopeOpen : MonoBehaviour
     }
     private IEnumerator RevealText()
     {
+        textUI.enableAutoSizing = true;
         textUI.text = fullText;
         textUI.ForceMeshUpdate();
 
